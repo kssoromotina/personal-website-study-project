@@ -1,0 +1,269 @@
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto'), local('Roboto-Regular'),
+		url('fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'), 
+		url('fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'); 
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto Bold'), local('Roboto-Bold'),
+		url('fonts/roboto-v20-latin_cyrillic-700.woff2') format('woff2'), 
+		url('fonts/roboto-v20-latin_cyrillic-700.woff') format('woff');
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto Black'), local('Roboto-Black'),
+		url('fonts/roboto-v20-latin_cyrillic-900.woff2') format('woff2'), 
+		url('fonts/roboto-v20-latin_cyrillic-900.woff') format('woff'); 
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Font Awesome 5 Free';
+	src: url("webfonts/fa-regular-400.woff2") format("woff2"), 
+		url("webfonts/fa-regular-400.woff") format("woff");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+.far {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 400;
+	color: #ff2f95;
+}
+
+@font-face {
+	font-family: 'Font Awesome 5 Brands';
+	src: url("webfonts/fa-brands-400.woff2") format("woff2"), 
+		url("webfonts/fa-brands-400.woff") format("woff");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+.fab {
+	font-family: 'Font Awesome 5 Brands';
+	font-weight: 400;
+	color: #ff2f95;
+}
+
+@font-face {
+	font-family: 'Font Awesome 5 Free';
+	src: url("webfonts/fa-solid-900.woff2") format("woff2"), 
+		url("webfonts/fa-solid-900.woff") format("woff");
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+}
+
+.fa,
+.fas {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	background: linear-gradient(to bottom, #fa0790, #f16521);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+html {
+	box-sizing: border-box; 
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit; 
+}
+
+body {
+	min-width: 320px;
+	margin: 0;
+	padding: 0;
+	font-family: Roboto;
+	color: #000;
+}
+
+a { 			
+	text-decoration: none;	 
+	color: inherit;
+}
+
+ul {
+	list-style: none;	
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	margin: 0;
+	font-size: 80px;
+	font-weight: 900;
+}
+
+h2 {
+	margin: 0;
+	font-size: 54px;
+	font-weight: 700;
+}
+
+h3 {
+	margin: 0;
+	font-size: 25px;
+	font-weight: 700;
+}
+
+h4 {
+	margin: 0;
+	font-size: 25px;
+	font-weight: 400;
+	color: #8993ad;
+}
+
+p {
+	margin: 0;	
+	padding: 0;
+}
+
+img {
+	max-width: 100%;	
+	height: auto;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	padding: 0;
+}
+
+.fixed-container {
+	max-width: 1170px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	margin: -1px;
+	padding: 0 !important;
+	border: 0 !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden;
+}
+
+.hidden {
+	display: none;
+}
+
+.active {
+	display: block;
+}
+
+@media screen and (max-width: 1280px) {
+	.fixed-container {
+		max-width: 100%;
+		padding: 0 40px;
+	}
+
+	h1 {
+		font-size: 64px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.fixed-container {
+		max-width: 1024px;
+		padding: 0 40px;
+	}
+
+	h1 {
+		font-size: 54px;
+	}
+
+	h2 {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 880px) {
+	h1 {
+		font-size: 50px;
+	}
+
+	h4 {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	h1 {
+		font-size: 45px;
+	}
+
+	h4 {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 680px) {
+	h1 {
+		text-align: center;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.fixed-container {
+		padding: 0 20px;
+	}
+
+	h1 {
+		font-size: 38px;
+	}
+
+	h2 {
+		font-size: 38px;
+	}
+
+}
+
+@media screen and (max-width: 320px) {
+	h1 {
+		font-size: 30px;
+	}
+
+	h2 {
+		font-size: 30px;
+	}
+}
