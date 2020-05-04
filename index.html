@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/footer.css">
 	<script src="scripts/jquery-3.4.1.min.js"></script>
 	<script src="scripts/owl.carousel.min.js"></script>
+	<script src="scripts/jquery.inputmask.min.js"></script>
 	<script src="scripts/script.js"></script>
 </head>
 <body>
@@ -68,22 +69,31 @@
 			</div>
 		</div>
 		<div class="modal-box modal-box__call-order hidden">
-			<form class="modal-window__form modal-window__form-call-order" action="#" enctype="text/plain" method="post">
+			<form class="modal-window__wrapper modal-window__form-call-order" action="https://echo.htmlacademy.ru/" enctype="multipart/form-data" method="POST" target="_blank">
 				<div class="modal-close-btn">
 					<span></span>
 					<span></span>
 				</div>
 				<h3 class="form-header">Заказать обратный звонок:</h3>
-				<fieldset class="form__item">
-					<input class="form__item-input client-name" type="text" name="client-name" placeholder="Ваше имя" maxlength="30" required>
-				</fieldset>
-				<fieldset class="form__item">
-					<input class="form__item-input client-phone-number" type="text" placeholder="Номер телефона" maxlength="12" name="client-phone-number" required>
-				</fieldset>
+				<input class="form__item-input client-name" type="text" name="client-name" placeholder="Ваше имя" maxlength="30" required> 
+				<input class="form__item-input client-phone-number" type="tel" id="phone1" name="client-phone-number" placeholder="Номер телефона" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required>
 				<div class="send-info">
 					<input class="button send-info__btn" type="submit" value="Отправить">
 				</div>
 			</form>
+		</div>
+		<div class="modal-box success-window hidden">
+			<div class="modal-window__wrapper success-window__content">
+				<div class="modal-close-btn">
+					<span></span>
+					<span></span>
+				</div>
+				<p class="success-message">
+					Сообщение отправлено.
+
+					Спасибо за Вашу заявку!
+				</p>
+			</div>
 		</div>
 	</header>
 	
@@ -155,8 +165,8 @@
 					и браузеры от 1000 рублей всего за&nbsp;4&nbsp;часа.*
 				</p>
 				<p class="offer__conditions">
-					* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально,
-					&nbsp; &nbsp;в зависимости от сложности задач.
+					<small>* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально,
+					&nbsp; &nbsp;в зависимости от сложности задач.</small>
 				</p>
 			</div>
 			<div class="flying-elements-box">
@@ -168,21 +178,15 @@
 			</div>	
 		</div>
 		<div class="modal-box modal-box__feedback hidden">
-			<form class="modal-window__form modal-window__form-feedback" action="#" enctype="text/plain" method="post">
+			<form class="modal-window__wrapper modal-window__form-feedback" action="https://echo.htmlacademy.ru/" enctype="multipart/form-data" method="POST" target="_blank">
 				<div class="modal-close-btn">
 					<span></span>
 					<span></span>
 				</div>
 				<h3 class="form-header">Оставить заявку:</h3>
-				<fieldset class="form__item">
-					<input id="client-name" class="form__item-input client-name" type="text" placeholder="Ваше имя" maxlength="30" name="client-name" required>
-				</fieldset>
-				<fieldset class="form__item">
-					<input class="form__item-input client-phone-number" type="text" placeholder="Номер телефона" maxlength="12" name="client-phone-number" required>
-				</fieldset>
-				<fieldset class="form__item">
-					<input id="client-email" class="form__item-input client-email" type="text" placeholder="Email" maxlength="50" name="client-email" required>
-				</fieldset>
+				<input id="client-name" class="form__item-input client-name" type="text" name="client-name" placeholder="Ваше имя" maxlength="30" required>
+				<input class="form__item-input client-phone-number" type="tel" id="phone2" name="client-phone-number" placeholder="Номер телефона" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required>
+				<input id="client-email" class="form__item-input client-email" type="email" name="client-email" placeholder="Email" maxlength="50" required>
 				<div class="send-info">
 					<input class="button send-info__btn" type="submit" value="Отправить">
 				</div>
@@ -220,26 +224,26 @@
 						</p>
 					</li>
 				</ul>
-				<div class="socials footer__item">
+				<address class="socials footer__item">
 					<button class="order-call-btn footer-btn">Заказать звонок</button>
 					<ul class="socials__list">
 						<li class="socials__list-item">
-							<a class="icon vk-icon" href="#" aria-label="Ссылка на страницу Вконтакте"></a>
+							<a class="icon vk-icon" href="https://vk.com/" aria-label="Ссылка на страницу Вконтакте" target="_blank"></a>
 						</li>
 						<li class="socials__list-item">
-							<a class="icon fb-icon" href="#" aria-label="Ссылка на страницу Facebook"></a>
+							<a class="icon fb-icon" href="https://www.facebook.com/" aria-label="Ссылка на страницу Facebook" target="_blank"></a>
 						</li>
 						<li class="socials__list-item">
-							<a class="icon tw-icon" href="#" aria-label="Ссылка на страницу Twitter"></a>
+							<a class="icon tw-icon" href="https://twitter.com/" aria-label="Ссылка на страницу Twitter" target="_blank"></a>
 						</li>
 						<li class="socials__list-item">
-							<a class="icon ig-icon" href="#" aria-label="Ссылка на страницу Instagram"></a>
+							<a class="icon ig-icon" href="https://www.instagram.com/" aria-label="Ссылка на страницу Instagram" target="_blank"></a>
 						</li>
 					</ul>
-				</div>
+				</address>
 			</div>
 		</div>
-		<div class="copyright">&copy; Дмитрий Алексеев, 2016 – 2018</div>
+		<div class="copyright"><small>&copy; Дмитрий Алексеев, 2016 – 2018</small></div>
 	</footer>
 </body>
 </html>

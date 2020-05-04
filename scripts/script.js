@@ -58,23 +58,81 @@ $(document).ready(function(){
 		$('.modal-box__call-order').addClass('active');
 	});
 
-	$('.modal-box__call-order').click(function(event){
-		if(event.target == this) {
-			$(this).removeClass('active');
-		}
-	});
-
 	$('.feedback-btn').click(function() {
 		$('.modal-box__feedback').addClass('active');
 	});
 
-	$('.modal-box__feedback').click(function(event){
+	$('.modal-box').click(function(event){
 		if(event.target == this) {
 			$(this).removeClass('active');
+			$('.form__item-input').val('').removeClass('error');
 		}
 	});
 
 	$('.modal-close-btn').click(function() {
 		$(this).parents('.modal-box').removeClass('active');
+		$('.form__item-input').val('').removeClass('error');
+	});
+
+	$('input[type="tel"]').inputmask({ "mask": "+7 (999) 999-99-99" });
+
+	$('form').submit(function() {
+		var $form = $(this);
+	
+		if ($form.find('input[name=client-name]').val() === '') {
+			$form.find('input[name=client-name]')
+				.addClass('error');
+			return false;
+		}
+
+		if ($form.find('input[name=client-phone-number]').val() === '') {
+			$form.find('input[name=client-phone-number]')
+				.addClass('error');
+			return false;
+		}
+
+		if ($form.find('input[name=client-email]').val() === '') {
+			$form.find('input[name=client-email]')
+				.addClass('error');
+			return false;
+		}
+	
+		$form.removeClass('error');
+
+		$.post(
+			$form.attr('action'), 
+			$form.serialize(),
+			console.log
+		);
+
+		return false;
+	});
+
+	$(document).ajaxSuccess(function() {
+		$('.form__item-input').val('');
+		$(".modal-box").removeClass('active');
+		$(".success-window").addClass('active');
+	});
+
+	$(window).resize(function() {
+		if ($(window).height() <= 460) {
+			$('.modal-box').css({
+				"overflow": "scroll"
+			});
+			$('.modal-window__wrapper').css({
+				"top": "1%",
+				"margin-top": "0"
+			});
+		}
+		else 
+			if ($(window).height() > 460) {
+				$('.modal-box').css({
+					"overflow": "auto"
+				});
+				$('.modal-window__wrapper').css({
+					"top": "50%",
+					"margin-top": "-250px"
+				});
+			}
 	});
 });
