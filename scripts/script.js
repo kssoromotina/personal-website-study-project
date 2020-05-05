@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('a[href="#"]').click(function(e){	
+	$('a[href^="#"]').click(function(e){	
 		e.preventDefault();
 	});
 
@@ -22,7 +22,7 @@ $(document).ready(function(){
 	$('.close-btn').click(function() {
 		$('.main-nav').removeClass('active');
 	});	
-	
+
 	$(".owl-carousel").owlCarousel({
 		loop:true,
 		responsiveClass:true,

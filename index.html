@@ -20,33 +20,33 @@
 	<script src="scripts/jquery.inputmask.min.js"></script>
 	<script src="scripts/script.js"></script>
 </head>
-<body>
+<body class="body">
 	<header class="header">
 		<div class="header__top-container fixed-container">
 			<nav class="main-nav">
 				<div class="close-btn">
-					<span></span>
-					<span></span>
+					<span class="close-btn__span"></span>
+					<span class="close-btn__span"></span>
 				</div>
-				<ul class="header-menu">
-					<li class="header-menu__item"><a class="header-menu__link" href="#services">Услуги</a></li>
-					<li class="header-menu__item"><a class="header-menu__link" href="#portfolio">Портфолио</a></li>
-					<li class="header-menu__item"><a class="header-menu__link" href="#price">Стоимость</a></li>
+				<ul class="u-list header-menu">
+					<li class="header-menu__item"><a class="link header-menu__link" href="#services">Услуги</a></li>
+					<li class="header-menu__item"><a class="link header-menu__link" href="#portfolio">Портфолио</a></li>
+					<li class="header-menu__item"><a class="link header-menu__link" href="#price">Стоимость</a></li>
 				</ul>			
 			</nav>
 			<div class="sub-menu">
-				<button class="nav-btn hidden" aria-label="Навигация"></button>
+				<button class="button nav-btn hidden" aria-label="Навигация"></button>
 				<div class="sub-menu__item">
-					<div class="phone-number"><a href="tel:+74959955577">+7 (499) 995-55-77</a></div>
-					<button class="order-call-btn header-btn">Заказать звонок</button>
-					<button class="call-btn-mob hidden" aria-label="Заказать звонок"></button>
+					<div class="phone-number"><a class="link" href="tel:+74959955577">+7 (499) 995-55-77</a></div>
+					<button class="button order-call-btn header-btn">Заказать звонок</button>
+					<button class="button call-btn-mob hidden" aria-label="Заказать звонок"></button>
 				</div>
 			</div>
 		</div>
 		<div class="bg-wrapper__gradient">
-			<img class="bg-gradient__img" src="img/gradient.png" alt="#">
-			<img class="bg-gradient__img-tab hidden" src="img/gradient-tab.png" alt="#">
-			<img class="bg-gradient__img-mob hidden" src="img/gradient-mob.png" alt="#">
+			<img class="img bg-gradient__img" src="img/gradient.png" alt="#">
+			<img class="img bg-gradient__img-tab hidden" src="img/gradient-tab.png" alt="#">
+			<img class="img bg-gradient__img-mob hidden" src="img/gradient-mob.png" alt="#">
 		</div>
 		<div class="flying-elements-box">
 			<div class="flying-element header__flying-element header__flying-element1">{&nbsp;}</div>
@@ -59,36 +59,36 @@
 		<div class="header__main-container">
 			<div class="header__info-block">
 				<div class="about-me">
-					<h1 class="about-me__name">Дмитрий Алексеев</h1>
-					<h4 class="about-me__profession">Frontend-разработчик и веб-верстальщик</h4>
-					<button class="feedback-btn learn-more-btn button">Узнать больше</button>
+					<h1 class="h1 about-me__name">Дмитрий Алексеев</h1>
+					<h4 class="h4 about-me__profession">Frontend-разработчик и веб-верстальщик</h4>
+					<button class="button main-btn feedback-btn learn-more-btn">Узнать больше</button>
 				</div>
 			</div>
 			<div class="header__img-block">
-				<img class="bg-man__img" src="img/man's_photo.png" alt="#">
+				<img class="img bg-man__img" src="img/man's_photo.png" alt="#">
 			</div>
 		</div>
 		<div class="modal-box modal-box__call-order hidden">
 			<form class="modal-window__wrapper modal-window__form-call-order" action="https://echo.htmlacademy.ru/" enctype="multipart/form-data" method="POST" target="_blank">
 				<div class="modal-close-btn">
-					<span></span>
-					<span></span>
+					<span class="modal-close-btn__span"></span>
+					<span class="modal-close-btn__span"></span>
 				</div>
-				<h3 class="form-header">Заказать обратный звонок:</h3>
-				<input class="form__item-input client-name" type="text" name="client-name" placeholder="Ваше имя" maxlength="30" required> 
-				<input class="form__item-input client-phone-number" type="tel" id="phone1" name="client-phone-number" placeholder="Номер телефона" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required>
+				<h3 class="h3 form-header">Заказать обратный звонок:</h3>
+				<input class="input form__item-input client-name" type="text" name="client-name" placeholder="Ваше имя" maxlength="30" required> 
+				<input class="input form__item-input client-phone-number" type="tel" id="phone1" name="client-phone-number" placeholder="Номер телефона" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required>
 				<div class="send-info">
-					<input class="button send-info__btn" type="submit" value="Отправить">
+					<input class="main-btn send-info__btn" type="submit" value="Отправить">
 				</div>
 			</form>
 		</div>
 		<div class="modal-box success-window hidden">
 			<div class="modal-window__wrapper success-window__content">
 				<div class="modal-close-btn">
-					<span></span>
-					<span></span>
+					<span class="modal-close-btn__span"></span>
+					<span class="modal-close-btn__span"></span>
 				</div>
-				<p class="success-message">
+				<p class="paragraph success-message">
 					Сообщение отправлено.
 
 					Спасибо за Вашу заявку!
@@ -99,72 +99,72 @@
 	
 	<main class="main">
 		<div class="about-me-mob fixed-container hidden">
-			<h1 class="about-me__name">Дмитрий Алексеев</h1>
-			<h4 class="about-me__profession">Frontend-разработчик и веб-верстальщик</h4>
-			<button class="feedback-btn learn-more-btn button">Узнать больше</button>
+			<h1 class="h1 about-me__name">Дмитрий Алексеев</h1>
+			<h4 class="h4 about-me__profession">Frontend-разработчик и веб-верстальщик</h4>
+			<button class="button main-btn feedback-btn learn-more-btn">Узнать больше</button>
 		</div>
 		<div class="fixed-container">
 			<div class="services">			
-				<h2 id="services" class="services__headline">Что я делаю</h2>
-				<ul class="services__list">
+				<h2 id="services" class="h2 services__headline">Что я делаю</h2>
+				<ul class="u-list services__list">
 					<li class="services__list-item">
-						<img class="services__list-icon" src="img/tools-icon.png" alt="Изображение html-тега на компьютере">
-						<p class="services__list-descr">Вёрстка лендинг–страниц 
+						<img class="img services__list-icon" src="img/tools-icon.png" alt="Изображение html-тега на компьютере">
+						<p class="paragraph services__list-descr">Вёрстка лендинг–страниц 
 						и сайтов любой сложности</p>
 					</li>
 					<li class="services__list-item">
-						<img class="services__list-icon" src="img/responsive-icon.png" alt="Изображение компютера, планшета и смартфона">
-						<p class="services__list-descr">Адаптивная вёрстка под все 
+						<img class="img services__list-icon" src="img/responsive-icon.png" alt="Изображение компютера, планшета и смартфона">
+						<p class="paragraph services__list-descr">Адаптивная вёрстка под все 
 						браузеры и устройства</p>
 					</li>
 					<li class="services__list-item">
-						<img class="services__list-icon" src="img/programming-icon.png" alt="Изображение с названием языка программирования C#">
-						<p class="services__list-descr">Frontend–разработка 
+						<img class="img services__list-icon" src="img/programming-icon.png" alt="Изображение с названием языка программирования C#">
+						<p class="paragraph services__list-descr">Frontend–разработка 
 						и программирование</p>
 					</li>
 					<li class="services__list-item">
-						<img class="services__list-icon" src="img/coding-icon.png" alt="Изображение html-тега и иконки меню «настройки»">
-						<p class="services__list-descr">Исправление и доработка 
+						<img class="img services__list-icon" src="img/coding-icon.png" alt="Изображение html-тега и иконки меню «настройки»">
+						<p class="paragraph services__list-descr">Исправление и доработка 
 						существующей вёрстки</p>
 					</li>
 				</ul>
-				<button class="feedback-btn learn-price-btn button">Узнать стоимость</button>
+				<button class="button main-btn feedback-btn learn-price-btn">Узнать стоимость</button>
 			</div>
 		</div>
 		<div class="portfolio">
 			<div class="fixed-container flex-container">		
-				<h2 id="portfolio" class="portfolio__headline">Примеры моих работ</h2>
-				<ul class="portfolio__list owl-carousel owl-theme">
+				<h2 id="portfolio" class="h2 portfolio__headline">Примеры моих работ</h2>
+				<ul class="u-list portfolio__list owl-carousel owl-theme">
 					<li class="portfolio__list-item">
-						<img class="portfolio__list-img" src="img/psychologist-website.png" alt="Скриншот страницы сайта из портфолио">
-						<p class="portfolio__list-descr">
-							<a class="portfolio__link" href="#">Сайт психолога Веры Антоновой</a>
+						<img class="img portfolio__list-img" src="img/psychologist-website.png" alt="Скриншот страницы сайта из портфолио">
+						<p class="paragraph portfolio__list-descr">
+							<a class="link portfolio__link" href="#">Сайт психолога Веры Антоновой</a>
 						</p>
 					</li>
 					<li class="portfolio__list-item">
-						<img class="portfolio__list-img" src="img/kids-shop-website.png" alt="Скриншот страницы сайта из портфолио">
-						<p class="portfolio__list-descr">
-							<a class="portfolio__link" href="#">Сайт магазина детской одежды</a>
+						<img class="img portfolio__list-img" src="img/kids-shop-website.png" alt="Скриншот страницы сайта из портфолио">
+						<p class="paragraph portfolio__list-descr">
+							<a class="link portfolio__link" href="#">Сайт магазина детской одежды</a>
 						</p>
 					</li>
 					<li class="portfolio__list-item">
-						<img class="portfolio__list-img" src="img/fisherman-website.png" alt="Скриншот страницы сайта из портфолио">
-						<p class="portfolio__list-descr">
-							<a class="portfolio__link" href="#">Сайт магазина «Рыболов»</a>
+						<img class="img portfolio__list-img" src="img/fisherman-website.png" alt="Скриншот страницы сайта из портфолио">
+						<p class="paragraph portfolio__list-descr">
+							<a class="link portfolio__link" href="#">Сайт магазина «Рыболов»</a>
 						</p>
 					</li>
 				</ul>
-				<button class="feedback-btn make-order-btn button">Заказать проект</button>
+				<button class="button main-btn feedback-btn make-order-btn">Заказать проект</button>
 			</div>
 		</div>			
 		<div class="offer">
 			<div class="fixed-container">
-				<h2 id="price" class="visually-hidden">Стоимость</h2>
-				<p class="offer__main">
+				<h2 id="price" class="h2 visually-hidden">Стоимость</h2>
+				<p class="paragraph offer__main">
 					Адаптивная вёрстка под все устройства
 					и браузеры от 1000 рублей всего за&nbsp;4&nbsp;часа.*
 				</p>
-				<p class="offer__conditions">
+				<p class="paragraph offer__conditions">
 					<small>* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально,
 					&nbsp; &nbsp;в зависимости от сложности задач.</small>
 				</p>
@@ -180,15 +180,15 @@
 		<div class="modal-box modal-box__feedback hidden">
 			<form class="modal-window__wrapper modal-window__form-feedback" action="https://echo.htmlacademy.ru/" enctype="multipart/form-data" method="POST" target="_blank">
 				<div class="modal-close-btn">
-					<span></span>
-					<span></span>
+					<span class="modal-close-btn__span"></span>
+					<span class="modal-close-btn__span"></span>
 				</div>
-				<h3 class="form-header">Оставить заявку:</h3>
-				<input id="client-name" class="form__item-input client-name" type="text" name="client-name" placeholder="Ваше имя" maxlength="30" required>
-				<input class="form__item-input client-phone-number" type="tel" id="phone2" name="client-phone-number" placeholder="Номер телефона" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required>
-				<input id="client-email" class="form__item-input client-email" type="email" name="client-email" placeholder="Email" maxlength="50" required>
+				<h3 class="h3 form-header">Оставить заявку:</h3>
+				<input id="client-name" class="input form__item-input client-name" type="text" name="client-name" placeholder="Ваше имя" maxlength="30" required>
+				<input class="input form__item-input client-phone-number" type="tel" id="phone2" name="client-phone-number" placeholder="Номер телефона" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required>
+				<input id="client-email" class="input form__item-input client-email" type="email" name="client-email" placeholder="Email" maxlength="50" required>
 				<div class="send-info">
-					<input class="button send-info__btn" type="submit" value="Отправить">
+					<input class="main-btn send-info__btn" type="submit" value="Отправить">
 				</div>
 			</form>
 		</div>
@@ -198,46 +198,46 @@
 		<div class="fixed-container">
 			<div class="footer__container">
 				<nav class="footer__nav footer__item">
-					<ul class="footer__menu">
+					<ul class="u-list footer__menu">
 						<li class="footer__menu-item">
-							<a class="footer__menu-link" href="#services">Услуги</a>
+							<a class="link footer__menu-link" href="#services">Услуги</a>
 						</li>
 						<li class="footer__menu-item">
-							<a class="footer__menu-link" href="#portfolio">Портфолио</a>
+							<a class="link footer__menu-link" href="#portfolio">Портфолио</a>
 						</li>
 						<li class="footer__menu-item">
-							<a class="footer__menu-link" href="#price">Стоимость</a>
+							<a class="link footer__menu-link" href="#price">Стоимость</a>
 						</li>					
 					</ul>
 				</nav>
-				<ul class="contacts-info footer__item">
+				<ul class="u-list contacts-info footer__item">
 					<li class="phone">
-						<p>
+						<p class="paragraph">
 							<i class="fas fa-phone-alt"></i>
-							<a class="contacts-info__link" href="tel:+74959955577">+7 (499) 995-77-55</a>
+							<a class="link contacts-info__link" href="tel:+74959955577">+7 (499) 995-77-55</a>
 						</p>
 					</li>
 					<li class="email">
-						<p>
+						<p class="paragraph">
 							<i class="fas fa-envelope"></i>
-							<a class="contacts-info__link" href="mailto:dmitry@alekseev.com">dmitry@alekseev.com</a>
+							<a class="link contacts-info__link" href="mailto:dmitry@alekseev.com">dmitry@alekseev.com</a>
 						</p>
 					</li>
 				</ul>
 				<address class="socials footer__item">
-					<button class="order-call-btn footer-btn">Заказать звонок</button>
-					<ul class="socials__list">
+					<button class="button order-call-btn footer-btn">Заказать звонок</button>
+					<ul class="u-list socials__list">
 						<li class="socials__list-item">
-							<a class="icon vk-icon" href="https://vk.com/" aria-label="Ссылка на страницу Вконтакте" target="_blank"></a>
+							<a class="link icon vk-icon" href="https://vk.com/" aria-label="Ссылка на страницу Вконтакте" target="_blank"></a>
 						</li>
 						<li class="socials__list-item">
-							<a class="icon fb-icon" href="https://www.facebook.com/" aria-label="Ссылка на страницу Facebook" target="_blank"></a>
+							<a class="link icon fb-icon" href="https://www.facebook.com/" aria-label="Ссылка на страницу Facebook" target="_blank"></a>
 						</li>
 						<li class="socials__list-item">
-							<a class="icon tw-icon" href="https://twitter.com/" aria-label="Ссылка на страницу Twitter" target="_blank"></a>
+							<a class="link icon tw-icon" href="https://twitter.com/" aria-label="Ссылка на страницу Twitter" target="_blank"></a>
 						</li>
 						<li class="socials__list-item">
-							<a class="icon ig-icon" href="https://www.instagram.com/" aria-label="Ссылка на страницу Instagram" target="_blank"></a>
+							<a class="link icon ig-icon" href="https://www.instagram.com/" aria-label="Ссылка на страницу Instagram" target="_blank"></a>
 						</li>
 					</ul>
 				</address>

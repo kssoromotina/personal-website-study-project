@@ -215,7 +215,7 @@
 	margin-top: 46px;
 }
 
-.button {
+.main-btn {
 	width: 270px;
 	height: 60px;
 	border: 1px solid transparent;
@@ -225,7 +225,7 @@
 	cursor: pointer;
 }
 
-.button:hover {
+.main-btn:hover {
 	border: 1px solid #f53f4f;
 	color: #f53f4f;
 	background-color: #fff;
@@ -288,7 +288,7 @@
 	cursor: pointer;
 }
 
-.modal-close-btn span {
+.modal-close-btn__span {
 	position: absolute;
 	top: 15px;
 	right: 5px;
@@ -299,11 +299,11 @@
 	transform: translateY(-15%);
 }
 
-.modal-close-btn span:first-child {
+.modal-close-btn__span:first-child {
 	transform: rotate(45deg);
 }
 
-.modal-close-btn span:last-child {
+.modal-close-btn__span:last-child {
 	transform: rotate(-45deg);
 }
 
@@ -441,7 +441,7 @@
 		background-color: #fbfbfb;
 	}
 
-	.close-btn span {
+	.close-btn__span {
 		position: absolute;
 		top: 17px;
 		left: 0;
@@ -452,11 +452,11 @@
 		transform: translateY(-15%);
 	}
 
-	.close-btn span:first-child {
+	.close-btn__span:first-child {
 		transform: rotate(45deg);
 	}
 
-	.close-btn span:last-child {
+	.close-btn__span:last-child {
 		transform: rotate(-45deg);
 	}
 
@@ -502,7 +502,7 @@
 		margin-top: 22px;
 	}
 
-	.button {
+	.main-btn {
 		width: 320px;
 		height: 68px;
 	}
@@ -599,7 +599,7 @@
 		height: 22px;
 	}
 
-	.close-btn span {
+	.close-btn__span {
 		top: 8px;
 		width: 22px;
 		height: 3px;
@@ -690,7 +690,7 @@
 		height: 25px;
 	}
 
-	.modal-close-btn span {
+	.modal-close-btn__span {
 		top: 13px;
 		width: 20px;
 	}
