@@ -14,7 +14,9 @@ $(document).ready(function(){
 	});
 
 
-	$('.nav-btn').click(function() {
+	$('.nav-btn').click(function(event) {
+		event.stopPropagation();
+
 		$('.nav-btn').toggleClass('close');
 		$('.main-nav').toggleClass('active');
 	});
@@ -22,6 +24,14 @@ $(document).ready(function(){
 	$('.close-btn').click(function() {
 		$('.main-nav').removeClass('active');
 	});	
+
+	$(document).click(function(event){
+		var menu = $('.main-nav');
+
+		if(!menu.is(event.target) && menu.has(event.target).length === 0 && menu.hasClass('active')) {
+			$('.main-nav').removeClass('active');
+		}
+	});
 
 	$(".owl-carousel").owlCarousel({
 		loop:true,
