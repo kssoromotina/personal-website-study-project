@@ -7,6 +7,7 @@
 	<link rel="preload" href="styles/fonts/roboto-v20-latin_cyrillic-900.woff2" as="font" type="font/woff2">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Personal website of Dmitriy Alekseev, frontend-developer and html/css developer">
 	<link rel="stylesheet" type="text/css" href="styles/normalize.css">
 	<link rel="stylesheet" type="text/css" href="styles/fontawesome/fontawesome.min.css">
 	<link rel="stylesheet" type="text/css" href="styles/owl.carousel.min.css">
@@ -15,10 +16,6 @@
 	<link rel="stylesheet" type="text/css" href="styles/header.css">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="stylesheet" type="text/css" href="styles/footer.css">
-	<script src="scripts/jquery-3.4.1.min.js"></script>
-	<script src="scripts/owl.carousel.min.js"></script>
-	<script src="scripts/jquery.inputmask.min.js"></script>
-	<script src="scripts/script.js"></script>
 </head>
 <body class="body">
 	<header class="header">
@@ -43,11 +40,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="bg-wrapper__gradient">
+		<picture class="bg-wrapper__gradient">
 			<img class="img bg-gradient__img" src="img/gradient.png" alt="#">
 			<img class="img bg-gradient__img-tab hidden" src="img/gradient-tab.png" alt="#">
 			<img class="img bg-gradient__img-mob hidden" src="img/gradient-mob.png" alt="#">
-		</div>
+		</picture>
 		<div class="flying-elements-box">
 			<div class="flying-element header__flying-element header__flying-element1">{&nbsp;}</div>
 			<div class="flying-element header__flying-element header__flying-element2">&lt;div&gt;</div>
@@ -64,9 +61,11 @@
 					<button class="button main-btn feedback-btn learn-more-btn">Узнать больше</button>
 				</div>
 			</div>
-			<div class="header__img-block">
-				<img class="img bg-man__img" src="img/man's_photo.png" alt="#">
-			</div>
+			<picture class="header__img-block">
+				<source srcset="img/man's_photo_mob.png" media="(max-width: 320px)">
+				<source srcset="img/man's_photo.png" media="(min-width: 321px)">
+				<img class="img bg-man__img" src="img/man's_photo.png" alt="Фото Дмитрия Алексеева">
+			</picture>
 		</div>
 		<div class="modal-box modal-box__call-order hidden">
 			<form class="modal-window__wrapper modal-window__form-call-order" action="https://echo.htmlacademy.ru/" enctype="multipart/form-data" method="POST" target="_blank">
@@ -76,7 +75,7 @@
 				</div>
 				<h3 class="h3 form-header">Заказать обратный звонок:</h3>
 				<input class="input form__item-input client-name" type="text" name="client-name" placeholder="Ваше имя" maxlength="30" required> 
-				<input class="input form__item-input client-phone-number" type="tel" id="phone1" name="client-phone-number" placeholder="Номер телефона" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required>
+				<input class="input form__item-input client-phone-number" type="tel" id="phone1" name="client-phone-number" placeholder="Номер телефона" pattern="[\+]\d{1}[\-]\d{3}[\-]\d{3}[\-]\d{2}[\-]\d{2}" minlength="16" maxlength="16" required>
 				<div class="send-info">
 					<input class="main-btn send-info__btn" type="submit" value="Отправить">
 				</div>
@@ -136,19 +135,19 @@
 				<h2 id="portfolio" class="h2 portfolio__headline">Примеры моих работ</h2>
 				<ul class="u-list portfolio__list owl-carousel owl-theme">
 					<li class="portfolio__list-item">
-						<img class="img portfolio__list-img" src="img/psychologist-website.png" alt="Скриншот страницы сайта из портфолио">
+						<img class="img portfolio__list-img" src="img/psychologist-website.png" alt="Сайт из портфолио">
 						<p class="paragraph portfolio__list-descr">
 							<a class="link portfolio__link" href="#">Сайт психолога Веры Антоновой</a>
 						</p>
 					</li>
 					<li class="portfolio__list-item">
-						<img class="img portfolio__list-img" src="img/kids-shop-website.png" alt="Скриншот страницы сайта из портфолио">
+						<img class="img portfolio__list-img" src="img/kids-shop-website.png" alt="Сайт из портфолио">
 						<p class="paragraph portfolio__list-descr">
 							<a class="link portfolio__link" href="#">Сайт магазина детской одежды</a>
 						</p>
 					</li>
 					<li class="portfolio__list-item">
-						<img class="img portfolio__list-img" src="img/fisherman-website.png" alt="Скриншот страницы сайта из портфолио">
+						<img class="img portfolio__list-img" src="img/fisherman-website.png" alt="Сайт из портфолио">
 						<p class="paragraph portfolio__list-descr">
 							<a class="link portfolio__link" href="#">Сайт магазина «Рыболов»</a>
 						</p>
@@ -185,7 +184,7 @@
 				</div>
 				<h3 class="h3 form-header">Оставить заявку:</h3>
 				<input id="client-name" class="input form__item-input client-name" type="text" name="client-name" placeholder="Ваше имя" maxlength="30" required>
-				<input class="input form__item-input client-phone-number" type="tel" id="phone2" name="client-phone-number" placeholder="Номер телефона" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required>
+				<input class="input form__item-input client-phone-number" type="tel" id="phone2" name="client-phone-number" placeholder="Номер телефона" pattern="[\+]\d{1}[\-]\d{3}[\-]\d{3}[\-]\d{2}[\-]\d{2}" minlength="16" maxlength="16" required>
 				<input id="client-email" class="input form__item-input client-email" type="email" name="client-email" placeholder="Email" maxlength="50" required>
 				<div class="send-info">
 					<input class="main-btn send-info__btn" type="submit" value="Отправить">
@@ -228,16 +227,16 @@
 					<button class="button order-call-btn footer-btn">Заказать звонок</button>
 					<ul class="u-list socials__list">
 						<li class="socials__list-item">
-							<a class="link icon vk-icon" href="https://vk.com/" aria-label="Ссылка на страницу Вконтакте" target="_blank"></a>
+							<a class="link icon vk-icon" href="http://www.vk.com/share.php?url=$Link&title=Frontend-разработчик и веб-верстальщик Дмитрий Алексеев&description=$Description&image=$ImageUrl&noparse=true" onclick="return Share.me(this);" rel="nofollow noopener" aria-label="Поделиться на своей странице Вконтакте" target="_blank"></a>
 						</li>
 						<li class="socials__list-item">
-							<a class="link icon fb-icon" href="https://www.facebook.com/" aria-label="Ссылка на страницу Facebook" target="_blank"></a>
+							<a class="link icon fb-icon" href="http://www.facebook.com/sharer/sharer.php?s=100&p%5Btitle%5D=Frontend-разработчик и веб-верстальщик Дмитрий Алексеев&p%5Bsummary%5D=$Description&p%5Burl%5D=$Link&p%5Bimages%5D%5B0%5D=$ImageUrl" rel="nofollow noopener" aria-label="Поделиться на своей странице Facebook" target="_blank"></a>
 						</li>
 						<li class="socials__list-item">
-							<a class="link icon tw-icon" href="https://twitter.com/" aria-label="Ссылка на страницу Twitter" target="_blank"></a>
+							<a class="link icon tw-icon" href="https://www.twitter.com/intent/tweet?original_referer=http%3A%2F%2Ffiddle.jshell.net%2F_display%2F&text=Frontend-разработчик и веб-верстальщик Дмитрий Алексеев&url=$Link" rel="nofollow noopener" aria-label="Поделиться на своей странице Twitter" target="_blank"></a>
 						</li>
 						<li class="socials__list-item">
-							<a class="link icon ig-icon" href="https://www.instagram.com/" aria-label="Ссылка на страницу Instagram" target="_blank"></a>
+							<a class="link icon ig-icon" href="https://www.instagram.com/" rel="nofollow noopener" aria-label="Поделиться на своей странице Instagram" target="_blank"></a>
 						</li>
 					</ul>
 				</address>
@@ -245,5 +244,10 @@
 		</div>
 		<div class="copyright"><small>&copy; Дмитрий Алексеев, 2016 – 2018</small></div>
 	</footer>
+
+	<script src="scripts/jquery-3.4.1.min.js"></script>
+	<script src="scripts/owl.carousel.min.js"></script>
+	<script src="scripts/jquery.inputmask.min.js"></script>
+	<script src="scripts/script.js"></script>
 </body>
 </html>

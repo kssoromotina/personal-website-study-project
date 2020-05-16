@@ -1,3 +1,5 @@
+'use strict';
+
 $(document).ready(function(){
 	$('a[href^="#"]').click(function(e){	
 		e.preventDefault();
@@ -5,7 +7,6 @@ $(document).ready(function(){
 
 	$('a[href^="#"]').click(function(){
 		let href = $(this).attr('href');
-		
 		let offset = $(href).offset().top - 50;
 
 		$('body,html').animate({
@@ -13,9 +14,8 @@ $(document).ready(function(){
 		}, 100);
 	});
 
-
-	$('.nav-btn').click(function(event) {
-		event.stopPropagation();
+	$('.nav-btn').click(function(e) {
+		e.stopPropagation();
 
 		$('.nav-btn').toggleClass('close');
 		$('.main-nav').toggleClass('active');
@@ -25,15 +25,19 @@ $(document).ready(function(){
 		$('.main-nav').removeClass('active');
 	});	
 
-	$(document).click(function(event){
-		var menu = $('.main-nav');
+	$(document).click(function(e){
+		const menu = $('.main-nav');
 
-		if(!menu.is(event.target) && menu.has(event.target).length === 0 && menu.hasClass('active')) {
+		if (
+			!menu.is(e.target) && 
+			menu.has(e.target).length === 0 && 
+			menu.hasClass('active')
+		) {
 			$('.main-nav').removeClass('active');
 		}
 	});
 
-	$(".owl-carousel").owlCarousel({
+	$('.owl-carousel').owlCarousel({
 		loop:true,
 		responsiveClass:true,
 		responsive:{
@@ -72,8 +76,8 @@ $(document).ready(function(){
 		$('.modal-box__feedback').addClass('active');
 	});
 
-	$('.modal-box').click(function(event){
-		if(event.target == this) {
+	$('.modal-box').click(function(e){
+		if(e.target == this) {
 			$(this).removeClass('active');
 			$('.form__item-input').val('').removeClass('error');
 		}
@@ -84,10 +88,10 @@ $(document).ready(function(){
 		$('.form__item-input').val('').removeClass('error');
 	});
 
-	$('input[type="tel"]').inputmask({ "mask": "+7 (999) 999-99-99" });
+	$('input[type="tel"]').inputmask({ "mask": "+7-999-999-99-99" });
 
 	$('form').submit(function() {
-		var $form = $(this);
+		let $form = $(this);
 	
 		if ($form.find('input[name=client-name]').val() === '') {
 			$form.find('input[name=client-name]')
@@ -111,8 +115,7 @@ $(document).ready(function(){
 
 		$.post(
 			$form.attr('action'), 
-			$form.serialize(),
-			console.log
+			$form.serialize()
 		);
 
 		return false;
@@ -120,8 +123,8 @@ $(document).ready(function(){
 
 	$(document).ajaxSuccess(function() {
 		$('.form__item-input').val('');
-		$(".modal-box").removeClass('active');
-		$(".success-window").addClass('active');
+		$('.modal-box').removeClass('active');
+		$('.success-window').addClass('active').fadeOut(3000);
 	});
 
 	$(window).resize(function() {
@@ -129,6 +132,7 @@ $(document).ready(function(){
 			$('.modal-box').css({
 				"overflow": "scroll"
 			});
+
 			$('.modal-window__wrapper').css({
 				"top": "1%",
 				"margin-top": "0"
@@ -139,10 +143,34 @@ $(document).ready(function(){
 				$('.modal-box').css({
 					"overflow": "auto"
 				});
+
 				$('.modal-window__wrapper').css({
 					"top": "50%",
 					"margin-top": "-250px"
 				});
 			}
 	});
+
+	function setOnclick(a) {
+		a.setAttribute(
+			"onclick",
+			"popupWin = window.open(this.href,'contacts','toolbar=0,status=0,width=626,height=436'); popupWin.focus(); return false"
+		);
+	}
+
+	function externalLinks() {
+		var links = document.getElementsByTagName("a");
+		let i;
+
+		for (i=0; i<links.length; i++) {
+			if (
+				links[i].getAttribute("href") && 
+				links[i].getAttribute("rel") === "nofollow noopener"
+			) {
+				setOnclick(links[i])
+			}
+		}
+	}
+
+	window.onload = externalLinks;
 });

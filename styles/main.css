@@ -84,6 +84,7 @@ button.owl-prev {
 	left: -35px;
 	width: 61px;
 	height: 60px;
+	outline: none;
 	border-radius: 30px;
 	background-image: url(../img/arrow.png) !important;
 	background-repeat: no-repeat !important;
@@ -96,6 +97,7 @@ button.owl-next {
 	left: 35px;
 	width: 61px;
 	height: 60px;
+	outline: none;
 	-webkit-transform: rotate(180deg);
 	-ms-transform: rotate(180deg);
 	transform: rotate(180deg);
@@ -269,6 +271,7 @@ button.owl-next {
 
 	.owl-theme .owl-dots .owl-dot {
 		margin-right: 10px;
+		outline: none;
 	}
 
 	.owl-theme .owl-dots .owl-dot span {
