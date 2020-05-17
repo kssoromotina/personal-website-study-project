@@ -115,16 +115,15 @@ $(document).ready(function(){
 
 		$.post(
 			$form.attr('action'), 
-			$form.serialize()
+			$form.serialize(),
+			function() {
+				$('.form__item-input').val('');
+				$('.modal-box').removeClass('active');
+				$('.success-window').addClass('active').fadeIn(1).fadeOut(3000);
+			}
 		);
 
 		return false;
-	});
-
-	$(document).ajaxSuccess(function() {
-		$('.form__item-input').val('');
-		$('.modal-box').removeClass('active');
-		$('.success-window').addClass('active').fadeOut(3000);
 	});
 
 	$(window).resize(function() {
